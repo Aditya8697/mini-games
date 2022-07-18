@@ -134,7 +134,7 @@ rockButton.onclick = function() {
     updateScoreboard(playerWins, playerWinDisplay, totalRounds, roundDisplay, draws, drawsDisplay, opponentWins, opponentWinDisplay);
     displayWinner(winnerDisplay, Winner);
   } else {
-    redirect.href = '/index.html';
+    redirect.href = 'https://aditya8697.github.io/mini-games/';
     winnerDisplay.innerHTML = getOverallWinner(playerWins, opponentWins);
   };
 };
@@ -148,7 +148,7 @@ paperButton.onclick = function() {
     updateScoreboard(playerWins, playerWinDisplay, totalRounds, roundDisplay, draws, drawsDisplay, opponentWins, opponentWinDisplay);
     displayWinner(winnerDisplay, Winner);
   } else {
-    redirect.href = '/index.html';
+    redirect.href = 'https://aditya8697.github.io/mini-games/';
     winnerDisplay.innerHTML=getOverallWinner(playerWins, opponentWins);
   };
 };
@@ -162,7 +162,7 @@ scissorsButton.onclick = function() {
     updateScoreboard(playerWins, playerWinDisplay, totalRounds, roundDisplay, draws, drawsDisplay, opponentWins, opponentWinDisplay);
     displayWinner(winnerDisplay, Winner);
   } else {
-    redirect.href = '/index.html';
+    redirect.href = 'https://aditya8697.github.io/mini-games/';
     winnerDisplay.innerHTML = getOverallWinner(playerWins, opponentWins);
   };
 };
