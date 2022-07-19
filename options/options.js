@@ -5,8 +5,15 @@ const body = document.getElementById('body');
 const inputName = document.getElementById('input-name');
 const saveButton = document.getElementById('save');
 
-var maxRounds = 5
-  , playerName = 'Anonymous';
+var saves = localStorage.getItem('TOTAL$SAVES');
+
+if (saves != 1) {
+  var maxRounds = 5
+    , playerName = 'Anonymous';
+} else {
+  maxRounds = localStorage.getItem('MAX$ROUNDS');
+  playerName = localStorage.getItem('PLAYER$NAME');
+}
 
 function setupDisplay(element, changes) {
   element.innerHTML = changes;
@@ -30,6 +37,8 @@ subtractOption.onclick = function() {
 }
 
 saveButton.onclick = function() {
+  saves = 1;
+  localStorage.setItem('TOTAL$SAVES', saves);
   localStorage.setItem('MAX$ROUNDS', maxRounds);
   playerName = inputName.value;
   console.log(playerName);
