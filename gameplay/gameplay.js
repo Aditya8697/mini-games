@@ -27,6 +27,9 @@ let playerOption, opponentOption
  var maxRounds = 5;
  var playerName = 'Anonymous';
 
+ maxRounds = localStorage.getItem('MAX$ROUNDS');
+ playerName = localStorage.getItem('PLAYER$NAME');
+
 // Variables End
 // Gameplay
   // Gameplay Functions
