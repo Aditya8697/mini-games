@@ -22,21 +22,6 @@ body {
   min-width: 870px;
 }
 
-@media all and (orientation: portrait) { 
-  body { 
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg); 
-    -ms-transform: rotate(90deg); 
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg); 
-    margin: 200px 0px 0px 0px;
-  }
-  .layout{
-    min-height: 480px;
-    min-width: 870px;
-  }
-}
-
 .header {
   margin: 10px;
   display: flex;
@@ -94,4 +79,37 @@ button {
   text-align: center;
   align-self: center;
   color: white;
+}
+
+@media all and (orientation: portrait) { 
+  body {
+    max-width: 460px;
+    min-height: 910px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-between;
+    
+  }
+  
+  .layout{
+    min-width: 100px;
+    max-width: 476px;
+    min-height: 900px;
+    margin: 8px -120px 5px 8px;
+    padding: 0px;
+  }
+  
+  .header {
+    margin: 3px;
+  }
+  
+  .main {
+    min-height: 690px;
+    max-width: 460px;
+    justify-content: space-around;
+  }
+  
+  .heading {
+    margin: 0px;
+  }
 }
