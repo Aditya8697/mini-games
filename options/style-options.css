@@ -22,21 +22,6 @@ body {
   min-width: 870px;
 }
 
-@media all and (orientation: portrait) { 
-  body { 
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg); 
-    -ms-transform: rotate(90deg); 
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg); 
-    margin: 200px 0px 0px 0px;
-  }
-  .layout{
-    min-height: 480px;
-    min-width: 870px;
-  }
-}
-
 .header {
   margin: 0px 5px px 5px;
   display: flex;
@@ -166,4 +151,50 @@ img {
   margin-bottom: 5px;
   justify-content: flex-start;
   align-self: flex-start;
+}
+
+@media all and (orientation: portrait) { 
+  body {
+    max-width: 460px;
+    min-height: 910px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-between;
+  }
+  
+  .layout{
+    min-width: 100px;
+    max-width: 476px;
+    min-height: 900px;
+    margin-right: -170px;
+    margin-left: 5px;
+    padding: 0px;
+  }
+  
+  .main {
+    min-height: 810px;
+    max-width: 460px;
+    justify-content: center;
+  }
+  
+  .heading {
+    margin-top: 45px;
+    min-width: 420px;
+  }
+  
+  .buttons,
+  .buttons-2 {
+    min-width: 320px;
+    max-width: 760px;
+    min-height: 540px;
+    padding: 0px;
+    justify-content: center;
+    gap: 42px;
+  }
+  
+  .buttons {
+    max-width: 320px;
+    flex-direction: column;
+    margin-top: 25px;
+  }
 }
