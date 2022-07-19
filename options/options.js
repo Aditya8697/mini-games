@@ -1,30 +1,37 @@
 const maxRoundsOption = document.getElementById('max-rounds');
-const playerNameOption = document.getElementById('player-name');
+const addOption = document.getElementById('increment');
+const subtractOption = document.getElementById('decrement');
+const body = document.getElementById('body');
+const inputName = document.getElementById('input-name');
+const saveButton = document.getElementById('save');
 
 var maxRounds = 5
   , playerName = 'Anonymous';
-
-function takeInput(display) {
-  let input = prompt(display + ': ');
-  return input;
-}
 
 function setupDisplay(element, changes) {
   element.innerHTML = changes;
 };
 
-function setupDisplayImg(element, changes) {
-  element.src = changes;
-};
-
-maxRoundsOption.onclick = function() {
-  maxRounds = takeInput('Max Rounds');
+body.onload = function() {
   localStorage.setItem('MAX$ROUNDS', maxRounds);
-  setupDisplay(maxRoundsOption, ('Max Rounds: ' + maxRounds))
-};
-
-playerNameOption.onclick = function() {
-  playerName = takeInput('Player Name:');
+  setupDisplay(maxRoundsOption, (maxRounds))
   localStorage.setItem('PLAYER$NAME', playerName);
-  setupDisplay(playerNameOption, ('Player Name: ' + playerName));
-};
+  inputName.value = playerName;
+}
+
+addOption.onclick = function() {
+  maxRounds++;
+  setupDisplay(maxRoundsOption, (maxRounds));
+}
+
+subtractOption.onclick = function() {
+  maxRounds--;
+  setupDisplay(maxRoundsOption, (maxRounds));
+}
+
+saveButton.onclick = function() {
+  localStorage.setItem('MAX$ROUNDS', maxRounds);
+  playerName = inputName.value;
+  console.log(playerName);
+  localStorage.setItem('PLAYER$NAME', playerName);
+}
