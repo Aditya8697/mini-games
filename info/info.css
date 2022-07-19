@@ -63,7 +63,7 @@ a {
   flex: 1;
   font-size: 24px;
   font-weight: 420;
-  width: 500px;
+  max-width: 420px;
 }
 
 .buttons {
@@ -122,6 +122,7 @@ img {
     justify-content: space-between;
   }
   
+  .layout2,
   .layout{
     min-width: 100px;
     max-width: 476px;
