@@ -8,19 +8,29 @@
   <link rel="stylesheet" href="style-options.css">
 </head>
 
-<body>
+<body id="body">
   <div class="layout">
     <div class="main">
       <div class="heading">Settings</div>
       <div class="buttons-2">
-      <button class="button-2" id="max-rounds">Max Rounds: 5</button>
-      <button>Theme: Classic<img src="anonymous.png"></button>
-      <button class="button-2" id="player-name">Player Name: Anonymous<img></button>
+        <div class="option">
+          <div class="optionText">Max Rounds: </div>
+          <button class="button-2" id="increment">+</button>
+          <div class="number" id="max-rounds">5</div>
+          <button class="button-2" id="decrement">-</button>
+        </div>
+        <button>Theme: Classic<img src="anonymous.png"></button>
+        <div class="option">
+          <div class="optionText">Name: </div>
+          <input type="text" id="input-name">
+        </div>
       </div>
     </div>
+    <div class="footer-left" id="save"><a href="https://aditya8697.github.io/mini-games/"><button class="button-2">save</button></a></div>
     <div class="footer"><a href="https://aditya8697.github.io/mini-games/"><button class="button-2">back</button></a></div>
   </div>
-  <script src="options.js">
+  <script src="options.js"></script>
 </body>
 
 </html>
+
