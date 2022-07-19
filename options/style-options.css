@@ -1,5 +1,5 @@
 * {
- /* border: 2px solid indianred;*/
+  /*border: 2px solid indianred;*/
 }
 
 body {
@@ -71,6 +71,12 @@ div, a{
   padding: 32px;
 }
 
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .buttons-2 {
   flex-direction: column;
   padding: 32px;
@@ -109,6 +115,14 @@ button {
   justify-content: space-around;
 }
 
+input {
+  color: white;
+  font-weight: 780;
+  background-color: #9963f7;
+  border-radius: 5px;
+  outline: 3px solid white;
+}
+
 .display button {
   height: 150px;
   width: 150px;
@@ -143,14 +157,19 @@ img {
   text-align: center;
   align-self: flex-end;
   color: white;
-  margin: -69px 45px 16px 45px;
+  margin: -80px 45px 90px 45px;
   justify-content: flex-end;
 }
 
 .footer-left {
-  margin-bottom: 5px;
+  margin-bottom: -105px;
   justify-content: flex-start;
   align-self: flex-start;
+}
+
+.footer {
+  margin-top: -40px;
+  margin-bottom: 30px;
 }
 
 @media all and (orientation: portrait) { 
